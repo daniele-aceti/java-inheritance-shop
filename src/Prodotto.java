@@ -80,7 +80,7 @@ public class Prodotto{
     }
 
     public double calcolaIva(){
-        switch (setIva(iva)) {
+        switch (iva) {
             case 22.0 : iva = prezzo * 1.22;
                 break;
             case 1.22 : iva = prezzo * 1.22 ;
