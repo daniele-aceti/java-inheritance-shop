@@ -14,7 +14,7 @@ public class Shop {
         + " IMEI: " + smartphone.getCodiceIMEI() + "  memoria: " + smartphone.getMemoria()+"GB");
 
 
-        Televisori tv = new Televisori("TV-ANR0234", "Sharp", 399, 1.22, 65, true);
+        Televisori tv = new Televisori("TV-ANR0234", "Sharp", 399, 22, 65, true);
         System.out.println("Code: "+ tv.getCodice() + " Name: "  + tv.getNome() + " prezzo iva inclusa " + tv.calcolaIva()
         + " dimensioni: " + tv.getDimensioni()+"-pollici" + "  smartTv: " + tv.getSmartTv());
     }

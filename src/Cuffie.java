@@ -6,7 +6,12 @@ public class Cuffie extends Prodotto {
 
     public Cuffie (String nome, String marca, double prezzo, double iva, String colore, boolean wireless){
         super(nome, marca, prezzo, iva);
-        this.colore = colore;
+        if(colore != null){
+            this.colore = colore;
+        }else{
+            System.out.println("Inserisci un colore valido");
+        }
+
         this.wireless = wireless;
     }
 

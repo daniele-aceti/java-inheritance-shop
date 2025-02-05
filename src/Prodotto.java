@@ -16,16 +16,24 @@ public class Prodotto{
     //costruttore
     public Prodotto (String nome, String marca, double prezzo, double iva){
         calcolaCodice();
-        this.nome = nome;
-        this.marca = marca;
-        this.prezzo = prezzo;
+
+        if(nome != null && marca != null){
+            this.nome = nome;
+            this.marca = marca;
+        }else{
+            System.out.println("Inserisci un nome o una marca valida");
+        }
+
+        if(prezzo > 0){
+           this.prezzo = prezzo;
+        }else {
+            System.out.println("Zero non è un prezzo valido");
+        }
         this.iva = iva;
     }
 
-    public double calcolaIva(){
-        double result = prezzo * iva;
-        return result;
-    }
+   
+
     public int calcolaCodice(){
         Random number = new Random();
         codice =  number.nextInt(1000,100000);
@@ -69,6 +77,21 @@ public class Prodotto{
 
     public String getMarca(){
         return marca;
+    }
+
+    public double calcolaIva(){
+        switch (setIva(iva)) {
+            case 22.0 : iva = prezzo * 1.22;
+                break;
+            case 1.22 : iva = prezzo * 1.22 ;
+                break;
+            case 4.0 : iva = prezzo * 1.04;
+                break;
+            case 1.04: iva = prezzo * 1.04;
+                break;
+                default: System.out.println("Imposta un valore dell'IVA valido");;
+        }
+            return iva;
     }
 
 

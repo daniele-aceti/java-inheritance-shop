@@ -6,8 +6,13 @@ public class Smartphone extends Prodotto {
 
     public Smartphone(String nome, String marca, double prezzo, double iva, int codiceIMEI, int memoria){
         super(nome, marca, prezzo, iva);
-        this.codiceIMEI = codiceIMEI;
-        this.memoria = memoria;
+        if(codiceIMEI > 0 && memoria > 0){
+             this.codiceIMEI = codiceIMEI;
+             this.memoria = memoria;
+        }else{
+            System.out.println("Inserisci un codiceIMEI o una memoria valida");
+        }
+
     }
 
     public int getCodiceIMEI(){

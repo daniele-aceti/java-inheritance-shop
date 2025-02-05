@@ -6,7 +6,11 @@ public class Televisori extends  Prodotto{
 
     public Televisori (String nome, String marca, double prezzo, double iva, double dimensioni, boolean smartTv){
         super(nome, marca, prezzo,iva);
-        this.dimensioni = dimensioni;
+        if(dimensioni > 0){
+            this.dimensioni = dimensioni;
+        }else{
+            System.out.println("Inserisci una dimensione valida");
+        }
         this.smartTv = smartTv;
     }
 
