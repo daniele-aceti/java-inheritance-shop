@@ -92,7 +92,6 @@ public class Prodotto {
                 break;
             default:
                 System.out.println("Imposta un valore dell'IVA valido");
-                ;
         }
         return iva;
     }
