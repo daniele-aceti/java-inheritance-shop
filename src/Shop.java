@@ -15,17 +15,16 @@ public class Shop {
         System.out.println("Code: " + televisore.getCodice() + " Name: " + televisore.getNome() + " prezzo iva inclusa " + televisore.calcolaIva()
                 + " dimensioni: " + televisore.getDimensioni() + "-pollici" + "  smartTv: " + televisore.getSmartTv());
 
-
         Carrello carrello = new Carrello(cuffie, smartphone, televisore);
         carrello.main();
-        if(cuffie.getNome().equals("cuffie")){
-                System.out.println(cuffie);
-        }else if(smartphone.getNome().equals("smartphone")){
-                System.out.println(smartphone);
-        }else if (televisore.getNome().equals("televisore")){
-                System.out.println(televisore);
+        carrello.aggiungiProdotto();
+        if (cuffie.getNome().equals("cuffie")) {
+            System.out.println(cuffie);
+        } else if (smartphone.getNome().equals("smartphone")) {
+            System.out.println(smartphone);
+        } else if (televisore.getNome().equals("televisore")) {
+            System.out.println(televisore);
         }
-
     }
 
 }

@@ -14,7 +14,6 @@ public class Carrello {
         this.smartphone = smartphone;
         this.televisore = televisore;
     }
-    
 
     public void main() {
         //INSERIMENTO DA PARTE DELL'ULTENTE DI NOME DEL PRODOTTO E MARCA
@@ -40,7 +39,7 @@ public class Carrello {
             System.out.println("Inserisci colore");
             String coloreCuffie = cuffie.setColore(scan.nextLine());
             System.out.println("Le cuffie sono wireless? scrivi true o false");
-            boolean wirelessCuffie = cuffie.setWireless(scan.hasNextBoolean());
+            boolean wirelessCuffie = cuffie.setWireless(scan.nextBoolean());
             cuffie = new Cuffie(nomeProdotto, nomeMarca, prezzoCuffie, ivaCuffie, coloreCuffie, wirelessCuffie);
         }
         //SMARTPHONE
@@ -78,8 +77,22 @@ public class Carrello {
             System.out.println("Inserisci la dimensione");
             double dimensioneTelevisore = televisore.setDimensioni(scan.nextDouble());
             System.out.println("E' una smartTV? scrivi true o false");
-            boolean smartTvTelevisore = televisore.setSmartTv(scan.hasNext());
+            boolean smartTvTelevisore = televisore.setSmartTv(scan.nextBoolean());
             televisore = new Televisori(nomeProdotto, nomeMarca, prezzoTelevisore, ivaTelevisore, dimensioneTelevisore, smartTvTelevisore);
+
         }
     }
+
+    public void aggiungiProdotto() {
+        Scanner nuovoProdotto = new Scanner(System.in);
+        //nuovoProdotto.nextInt();
+        System.out.println("Inserisci un nuovo prodotto rispondi true o false");
+        boolean risposta = nuovoProdotto.nextBoolean();
+        if (risposta) {
+            main();
+        } else {
+            return;
+        }
+    }
+
 }
