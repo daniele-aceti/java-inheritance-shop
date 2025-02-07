@@ -17,7 +17,7 @@ public class Shop {
 
         Carrello carrello = new Carrello(cuffie, smartphone, televisore);
         carrello.main();
-        carrello.aggiungiProdotto();
+        //carrello.aggiungiProdotto();
         if (cuffie.getNome().equals("cuffie")) {
             System.out.println(cuffie);
         } else if (smartphone.getNome().equals("smartphone")) {

@@ -82,10 +82,9 @@ public class Carrello {
 
         }
     }
-
+    /* 
     public void aggiungiProdotto() {
         Scanner nuovoProdotto = new Scanner(System.in);
-        //nuovoProdotto.nextInt();
         System.out.println("Inserisci un nuovo prodotto rispondi true o false");
         boolean risposta = nuovoProdotto.nextBoolean();
         if (risposta) {
@@ -93,6 +92,6 @@ public class Carrello {
         } else {
             return;
         }
-    }
+    } */
 
 }

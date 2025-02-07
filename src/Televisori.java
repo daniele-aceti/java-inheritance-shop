@@ -35,7 +35,7 @@ public class Televisori extends Prodotto {
 
     @Override
     public String toString() {
-        return "nome: " + getNome() + " marca: " + getMarca() + " prezzo con iva :" + getIva() + " Euro " + " dimensioni: " + dimensioni + " è smartTv? "+ smartTv;
+        return "nome: " + getNome() + " marca: " + getMarca() + " prezzo con iva :" + getIva() + " Euro " + " dimensioni: " + dimensioni + " è smartTv? " + smartTv;
     }
 
 }
