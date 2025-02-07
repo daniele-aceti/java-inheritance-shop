@@ -95,5 +95,14 @@ public class Prodotto {
         }
         return iva;
     }
+    public double setPrezzo(double prezzo) {
+        this.prezzo = prezzo;
+        return prezzo;
+    }
+
+    public String toString() {
+        return "nome: " + nome + " marca: " + marca + " prezzo con iva: " + iva + "Euro ";
+    }
+
 
 }

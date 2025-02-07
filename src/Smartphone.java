@@ -20,16 +20,24 @@ public class Smartphone extends Prodotto {
         return codiceIMEI;
     }
 
-    public void setCodiceIMEI(int codiceIMEI) {
+    public int setCodiceIMEI(int codiceIMEI) {
         this.codiceIMEI = codiceIMEI;
+        return codiceIMEI;
     }
 
     public int getMemoria() {
         return memoria;
     }
 
-    public void setMemoria(int memoria) {
+    public int setMemoria(int memoria) {
         this.memoria = memoria;
+        return memoria;
     }
+
+    @Override
+    public String toString() {
+        return "nome: " + getNome() + " marca: " + getMarca() + " prezzo con iva: " + getIva() + " Euro "+ " codiceIMEI: " + codiceIMEI + " memoria "+ memoria;
+    }
+ 
 
 }

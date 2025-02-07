@@ -19,15 +19,23 @@ public class Televisori extends Prodotto {
         return dimensioni;
     }
 
-    public void setDimensioni(double dimensioni) {
+    public double setDimensioni(double dimensioni) {
         this.dimensioni = dimensioni;
+        return dimensioni;
     }
 
     public boolean getSmartTv() {
         return smartTv;
     }
 
-    public void setSmartTv(boolean smartTv) {
+    public boolean setSmartTv(boolean smartTv) {
         this.smartTv = smartTv;
+        return smartTv;
     }
+
+    @Override
+    public String toString() {
+        return "nome: " + getNome() + " marca: " + getMarca() + " prezzo con iva :" + getIva() + " Euro " + " dimensioni: " + dimensioni + " è smartTv? "+ smartTv;
+    }
+
 }
