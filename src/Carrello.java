@@ -19,9 +19,9 @@ public class Carrello {
         //INSERIMENTO DA PARTE DELL'ULTENTE DI NOME DEL PRODOTTO E MARCA
         Scanner scan = new Scanner(System.in);
         System.out.println("Inserisci il nome del prodotto");
-        String nomeProdotto = scan.nextLine();
+        String nomeProdotto = scan.nextLine().toLowerCase();
         System.out.println("Inserisci il nome della Marca");
-        String nomeMarca = scan.nextLine();
+        String nomeMarca = scan.nextLine().toLowerCase();
         //CUFFIE
         if (nomeProdotto.equals("cuffie")) {
             nomeProdotto = cuffie.setNome("cuffie");
@@ -82,16 +82,5 @@ public class Carrello {
 
         }
     }
-    /* 
-    public void aggiungiProdotto() {
-        Scanner nuovoProdotto = new Scanner(System.in);
-        System.out.println("Inserisci un nuovo prodotto rispondi true o false");
-        boolean risposta = nuovoProdotto.nextBoolean();
-        if (risposta) {
-            main();
-        } else {
-            return;
-        }
-    } */
 
 }
